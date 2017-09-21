@@ -19,7 +19,7 @@ public class PTra03_04 {
 
 		// 文字列を数字に変換して、変数numに代入します
 		// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
-		int num = Integer.parseInt(line);
+		int year = Integer.parseInt(line);
 
 		//---------------------ここから本題-----------------------
 		/*
@@ -33,6 +33,24 @@ public class PTra03_04 {
 		 * ※ プログラムは何行書いても良いです
 		 */
 
+
+         boolean isleapyear;
+
+
+         if(year%4==0) {
+        	 isleapyear=true;
+        	 if(year%400==0){
+        		 System.out.println(year+"年はうるう年です。");
+        	 }else if(year%100==0) {
+        		 System.out.println(year+"年はうるう年ではありません。");
+        	 }else {
+        		 System.out.println(year+"年はうるう年です。");
+        	 }
+         }else {
+        	 isleapyear=false;
+        	 System.out.println(year+"年はうるう年ではありません。");
+
+         }
 
 	}
 }
