@@ -21,6 +21,9 @@ public class PTra02_10 {
 		 * ※ 日本円には小数点がありませんので、整数の値で出力してください(少数部分は切り捨て)
 		 * ※ プログラムは何行書いても良いです
 		 */
-
+          int i =(int)(coffee*2*1.08);
+          int o =(int)(snack*1.08);
+          int k=1000-i-o;
+          System.out.println(k);
 	}
 }
