@@ -10,13 +10,16 @@ public class PTra02_01 {
 	public static void main(String[] args) {
 
 		// ★ 20を5で割った値を出力してください
-
+          int divi = 20/5;
+          System.out.println(divi);
 
 		// ★ 126に13を掛けた値を出力してください
-
+          int multi = 126*13;
+          System.out.println(multi);
 
 		// ★ 97を6で割ったときの余りを出力してください
 
-
+          int quo = 96%6;
+          System.out.println(quo);
 	}
 }
