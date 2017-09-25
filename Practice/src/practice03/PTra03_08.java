@@ -35,6 +35,15 @@ public class PTra03_08 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
-
+		int cost=0;
+		if(num==1) {
+			cost=150;
+		}else if(num==2) {
+			cost=160;
+		}else if(num==3){
+			cost=200;
+		}
+        int left=money-cost;
+        System.out.println(left);
 	}
 }
