@@ -7,16 +7,14 @@ package practice01;
  */
 
 public class PTra01_04 {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 5};
+        int[] b = {10, 20, 30, 40, 50};
 
-		// ★ float型の変数 f を宣言してください
-          float f ;
+        b = a;
+        b[0] = 100;
 
-		// ★ 変数 f に 3.14 を代入してください
-          f=3.14F;
-
-		// ★ 変数 f を出力してください
-          System.out.println(f);
-
-	}
+        System.out.println(b[1]);
+    }
 }
+
