@@ -14,10 +14,41 @@ public class PTra10_06 {
 
 	public static void main(String[] args) {
 
-		/*
-		 * carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
-		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
-		 */
+
+		for(int i = 0 ; i < 3 ; i++) {
+			Car car = new Car() ;
+
+			car.serialNo = 10000 ;
+
+			car.color = "Red" ;
+
+			car.gasoline = 50;
+
+
+			final int distance = 300;
+
+
+			int sum = 0;
+			int a = 0;
+			while(true) {
+					a++ ;
+				int process = car.run();
+				sum += process;
+
+				if(process == -1) {
+					System.out.println("目的地に到達できませんでした");
+					break;
+				}
+
+
+				if(sum >= distance){
+					System.out.println("目的地にまで"+a+"時間かかりました。残りのガソリンは、"+car.gasoline+"リットルです。");
+					break;
+				}
+
+			}
+		}
+
 
 	}
 }
