@@ -33,6 +33,6 @@ public class PTra10_01 {
 
 		// ★ 変数usに格納されているインスタンスの、フィールドuserId, userNm, mail, passwordを出力してください
 		User us = new User();
-		us.tt();
+		
 	}
 }
