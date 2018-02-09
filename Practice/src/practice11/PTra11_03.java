@@ -22,12 +22,17 @@ public class PTra11_03 {
 	public static void main(String[] args) {
 
 		// ★ sumメソッドを呼び出してください
-		sum(1,2);
+		PTra11_03 i = new PTra11_03();
+		
+		i.sum(1,1);
+		
 	}
 
-	public static void sum(int x, int y) {
+	public void sum(int x, int y) {
 		System.out.println("sumメソッドを呼び出しました。" + x + "＋" + y + "＝" + (x + y));
 
 		System.out.println("クラスフィールドnumber："+number /* + ★ クラスフィールドnumberの出力をしてください */);
 	}
+	
+	//
 }

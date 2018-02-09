@@ -19,8 +19,8 @@ public class PTra13_07 {
 	public static void main(String[] args) {
 
 		// ★ SuperHeroインスタンスとSlimeインスタンスを作成し、それぞれの名前に"勇者（装備あり）", "スライム"を設定してください
-		SuperHero sr = new SuperHero(25,10,7);
-		Slime sl = new Slime(10,5,2);
+		SuperHero sr = new SuperHero();
+		Slime sl = new Slime();
 		
 		sr.setName("勇者（装備あり）");
 		sl.setName("スライム");
@@ -29,7 +29,7 @@ public class PTra13_07 {
 		Item item = new Item("こんぼう", 4);
 
 		// ★ 作成したItemインスタンスをSuperHeroに持たせてください
-		
+		sr.equipment = item;
 
 		/*
 		 * ★ SuperHeroとSlimeを、どちらかが体力０になるまで戦わせます
@@ -38,9 +38,9 @@ public class PTra13_07 {
 		 * 上記を繰り返し行います
 		 */
 		while(true) {
-			sr.attack();
+			
 			sl.damage(sr.attack());
-			sl.attack();
+			
 			sr.damage(sl.attack());
 			
 			if(sl.damage(sr.attack()) == true) {

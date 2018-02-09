@@ -26,15 +26,11 @@ package practice13.common;
 
 public class SuperHero extends Hero{
 	
-	public SuperHero(int hp, int power, int endurance) {
-		super(hp, power, endurance);
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-	Item equipment ;
+	public Item equipment ;
 	
 	public int attack() {
-		return super.power += equipment.additionalDamage;
+		return  super.attack() + equipment.getAdditonalDamage();
 	}
-
-	}
+		
+		
+}
