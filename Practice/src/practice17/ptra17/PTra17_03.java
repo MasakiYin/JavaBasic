@@ -40,21 +40,26 @@ public class PTra17_03 {
 				System.out.println("問題：" + (i + 1));
 				System.out.println(question[i]);
 
-				System.out.println("回答を数字で入力してください");
-				String input = ThrowExceptionUtil.inputValue();
-
-				int num = Integer.parseInt(input);
-
+				
+					System.out.println("回答を数字で入力してください");
+				
+					String input = ThrowExceptionUtil.inputValue();
+					
+					
+					
+					int num = Integer.parseInt(input);
+				
 				if (answer[i] == num) {
 					score++;
 				}
+				
 			}
 		} catch(IOException e) {
 			System.out.println("例外が発生しました");
 		} catch(NumberFormatException e) {
 			System.out.println("数字以外が入力されました");
+			quiz();
 		}
-
 		System.out.println("全ての問題が終わりました。");
 		System.out.println("あなたの得点は・・・" + score + "点です！");
 
