@@ -15,7 +15,7 @@ public class PTra17_04 {
 		 * ★ strに入っている文字列を1文字ずつゆっくり表示させるプログラムを完成させてください
 		 * ※ Thread.sleep を使用すること
 		 */
-		char strNum[] = str.toCharArray();
+		char[] strNum = str.toCharArray();
 		
 		int num = strNum.length;
 		

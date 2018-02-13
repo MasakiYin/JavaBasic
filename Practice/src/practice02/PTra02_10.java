@@ -23,7 +23,7 @@ public class PTra02_10 {
 		 */
           int i =(int)(coffee*2*1.08);
           int o =(int)(snack*1.08);
-          int k=1000-i-o;
+          int k = moneyInHand-i-o;
           System.out.println(k);
 	}
 }

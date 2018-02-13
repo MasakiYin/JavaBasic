@@ -52,9 +52,9 @@ public class PTra18_02 {
 	                String line = scanner.nextLine();
 	                String[] lineArray = line.split(",",4);
 	                
-	                player.setCountry(lineArray[0]);
+	                player.setCountry(lineArray[2]);
 	                player.setName(lineArray[1]);
-	                player.setPosition(lineArray[2]);
+	                player.setPosition(lineArray[0]);
 	                player.setTeam(lineArray[3]);         
 	                
 	                

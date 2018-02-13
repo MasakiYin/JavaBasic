@@ -25,39 +25,39 @@ public class PTra18_03 {
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
 		ArrayList<Player> array = new ArrayList<Player>();
-		 
+
 		 Player player;
-		 
+
         try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
-        	
+
             while (scanner.hasNext()) {
-            	
+
             	player = new Player();
-            	
-            	
+
+
                 String line = scanner.nextLine();
                 String[] lineArray = line.split(",",4);
-                
+
                 player.setCountry(lineArray[0]);
                 player.setName(lineArray[1]);
                 player.setPosition(lineArray[2]);
-                player.setTeam(lineArray[3]);         
-                
-                
-                
-                
-                if (player.getTeam().indexOf("レアル・マドリード") != -1) {
-        		    
+                player.setTeam(lineArray[3]);
+
+
+
+
+                if (player.getTeam().equals("レアル・マドリード")) {
+
                 	continue;
-                	
-        		}else if(player.getTeam().indexOf("バルセロナ") != -1) {
-        			
+
+        		}else if(player.getTeam().equals("バルセロナ")) {
+
         			continue;
         		}else {
         			array.add(player);
         		}
-                
-                
+
+
 
             }
         } catch (FileNotFoundException e) {
@@ -67,11 +67,11 @@ public class PTra18_03 {
 
 
 		// ★ ①のArrayListの中から"レアル・マドリード", "バルセロナ"の選手を除外してください
-        
-        
+
+
 
 		// ★ 削除後のArrayListの中身を全件出力してください
-        	
+
         	for(Player info : array) {
         		System.out.println(info.toString());
         	}
