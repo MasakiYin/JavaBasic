@@ -7,21 +7,10 @@ package practice01;
  */
 
 public class PTra01_01 {
-    public static void main(String[] args) {
-        
-        
-        System.out.println(args[2]+args[2]+args[2]);
-        
-        System.out.println(10>1);
-        
-        	if(true) {
-        		System.out.println(args[2]);
-        	}
-        		boolean a = false;
-        		
-        		if(a) {
-        			System.out.println(123);
-        		}
-    }
-}
+	public static void main(String[] args) {
 
+		// 「Welcome! Java」と出力してください
+		System.out.println("Welcome! Java");
+
+	}
+}

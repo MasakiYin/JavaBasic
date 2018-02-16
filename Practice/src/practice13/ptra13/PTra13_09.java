@@ -37,7 +37,7 @@ public class PTra13_09 {
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
 
-		Employee[] employees = new Employee[3];
+		Employee[] employees = new Employee[NAMEDATA.length];
 
 		for(int i = 0 ; i < employees.length ; i++) {
 

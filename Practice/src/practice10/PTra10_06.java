@@ -6,6 +6,8 @@ package practice10;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
+import java.util.Scanner;
+
 public class PTra10_06 {
 
 	/*
@@ -14,41 +16,53 @@ public class PTra10_06 {
 
 	public static void main(String[] args) {
 
+		/*
+		 * carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
+		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
+		 */
+		// 車の製造
+		Scanner scanner = new Scanner(System.in);
+		Car[] cars = new Car[3];
+		for (int i = 0; i < cars.length; i++) {
+			System.out.println("------------------------------------");
+			System.out.println((i + 1) + "台目");
+			cars[i] = new Car();
 
-		for(int i = 0 ; i < 3 ; i++) {
-			Car car = new Car() ;
+			System.out.println("シリアル№、車体カラー、ガソリン量をカンマ区切りで入力してください");
+			String line = scanner.nextLine();
 
-			car.serialNo = 10000 ;
+			String[] inputInfo = line.split(",");
 
-			car.color = "Red" ;
+			cars[i].serialNo = Integer.parseInt(inputInfo[0]);
+			cars[i].color = inputInfo[1];
+			cars[i].gasoline = Integer.parseInt(inputInfo[2]);
+		}
 
-			car.gasoline = 50;
+		// それぞれの車を走らせる。
+		final int distance = 200;
+		int[] count = new int[cars.length];
 
-
-			final int distance = 300;
-
-
-			int sum = 0;
-			int a = 0;
-			while(true) {
-					a++ ;
-				int process = car.run();
-				sum += process;
-
-				if(process == -1) {
-					System.out.println("目的地に到達できませんでした");
+		for (int i = 0; i < cars.length; i++) {
+			int move = 0;
+			while (distance - move > 0) {
+				int ret = cars[i].run();
+				if (ret == -1) {
+					count[i] = -1;
 					break;
 				}
 
-
-				if(sum >= distance){
-					System.out.println("目的地にまで"+a+"時間かかりました。残りのガソリンは、"+car.gasoline+"リットルです。");
-					break;
-				}
-
+				move += ret;
+				count[i]++;
 			}
 		}
 
-
+		// 出力
+		for (int i = 0; i < count.length; i++) {
+			if (count[i] == -1) {
+				System.out.println((i + 1) + "台目は目的地に到達できませんでした");
+			} else {
+				System.out.println((i + 1) + "台目の車が掛かった時間：" + count[i] + "時間");
+			}
+		}
 	}
 }

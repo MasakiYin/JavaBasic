@@ -29,7 +29,8 @@ public class PTra13_07 {
 		Item item = new Item("こんぼう", 4);
 
 		// ★ 作成したItemインスタンスをSuperHeroに持たせてください
-		sr.equipment = item;
+		sr.setEquipment(item);
+		
 
 		/*
 		 * ★ SuperHeroとSlimeを、どちらかが体力０になるまで戦わせます
